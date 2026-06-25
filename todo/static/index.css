@@ -1,0 +1,118 @@
+/* index.css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.signup-login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-box{
+    width: 500px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.imp{
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.imp:focus{
+    border-color: #667eea;
+}
+
+.submit-button{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover{
+    background: #5563d6;
+}
+
+/* Todo List */
+
+.task-container{
+    margin-top: 25px;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9ff;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+}
+
+.task-title{
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.task-date{
+    font-size: 12px;
+    color: #777;
+}
+
+.no-task{
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Delete Button */
+
+.delete-btn{
+    background: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.delete-btn:hover{
+    background: #e60000;
+}

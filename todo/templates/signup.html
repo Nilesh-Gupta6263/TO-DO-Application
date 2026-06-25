@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="signup-login">
+        <div class="signup-box">
+<form action="" method='post'>
+                {% csrf_token %}
+                <div class="heading">
+                    Signup
+                </div>
+<div class="line"></div>
+
+<div class="field">
+    <b>Username</b>
+    <input type="text" class="imp" placeholder='Enter Your Username' required name='fnm'>
+</div>
+
+<div class="field">
+    <b>Email</b>
+    <input type="email" class="imp" placeholder='Enter Your email' required name='email'>
+</div>
+
+<div class="field">
+    <b>Password</b>
+    <input type="password" class="imp" placeholder='Enter Your password' required name='pwd'>
+</div>
+
+    <div class='field'>
+        <input type="submit" value="Signup" class="submit-button">
+    </div>
+</form>
+
+<div class="field">
+    <b style="margin-left: 13px;"> Allready have an account</b>
+    <br>
+    <a class="anc" href="{% url 'login' %}">Login</a>
+    </div>
+        </div>
+    </div>
+</body>
+</html>

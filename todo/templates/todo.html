@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="signup-login">
+        <div class="signup-box">
+            
+<form action="" method='post'>
+                {% csrf_token %}
+                <div class="heading">
+                    Get Things Done
+                </div>
+
+                <a href="{% url 'logout' %}"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                
+                <input type="text" name='title' class='imp' required placeholder="Add Todays Task">
+
+                <input type="submit" class="submit-button" value="Add Task">
+</form>
+
+<div class="task-container">
+    {% for task in tasks %}
+        <div class="task">
+            <div class="task-title">
+                {{ task.title }}
+             </div>
+                <div class="task-title">
+                {{ task.date }}
+            </div>
+            
+<a href="{% url 'edit_task' task.srno %}">
+  <i class="fa-solid fa-pen-to-square"></i>
+</a>
+ <a href="{% url 'delete_task' task.srno %}"><i class="fa-solid fa-trash"></i></a>  
+</div>
+    {% empty %}
+        <p class="no-task">No tasks available.</p>
+    {% endfor %}
+</div>
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>
