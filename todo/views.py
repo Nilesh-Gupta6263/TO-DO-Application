@@ -56,7 +56,7 @@ def todo_view(req):
 
 
 def delete_task(req, id):
-    task = tooo.objects.get(srno=id)
+    task = tooo.objects.get(srno=id,user=req.user)
     task.delete()
     return redirect('todo')    
 
@@ -64,7 +64,7 @@ def delete_task(req, id):
 
 def edit_task(req, id):
 
-    task = tooo.objects.get(srno=id)
+    task = tooo.objects.get(srno=id , user=req.user)
 
     if req.method == 'POST':
         task.title = req.POST.get('title')
